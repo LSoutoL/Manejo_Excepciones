@@ -4,6 +4,7 @@
  */
 package excepciones;
 
+import excepciones.objetos.MioException;
 import excepciones.objetos.Persona;
 import excepciones.servicios.PersonaServicio;
 
@@ -17,15 +18,15 @@ public class Ejercicio1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         PersonaServicio servicio = new PersonaServicio();
-        Persona p;
-        /*try {
+        Persona p= new Persona();
+        try {
            servicio.esMayorDeEdad(p.getEdad());
-        } catch (Exception e){
-            System.out.println("Error! La persona aun no ha nacido.");
-            //System.out.println(e.getMessage());
-        }*/
+        } catch (MioException e){
+            //System.out.println("Error! La persona aun no ha nacido.");
+            System.out.println(e.getMessage());
+        }
         
         
         /*

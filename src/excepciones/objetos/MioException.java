@@ -9,6 +9,14 @@ package excepciones.objetos;
  * @author lucia
  */
 public class MioException extends Exception {
+
+    public MioException() {
+    }
+
+    @Override
+    public String getMessage() {
+        return "Error! La persona aun no ha nacido";
+    }
    
 
     

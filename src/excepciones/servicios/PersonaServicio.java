@@ -4,6 +4,7 @@
  */
 package excepciones.servicios;
 
+import excepciones.objetos.MioException;
 import excepciones.objetos.Persona;
 import java.util.Scanner;
 
@@ -33,14 +34,14 @@ public class PersonaServicio {
         return new Persona(nombre, edad, sexo, peso, altura);
     }
         
-    public boolean esMayorDeEdad (int edad){ // throws Exception
+    public boolean esMayorDeEdad (int edad)throws Exception{ // 
         boolean mayor = true;
         if (edad<18){
              mayor=false;
         }
-        //if (edad==0){
-        //throw new Exception ("Error! La persona aun no ha nacido");
-        //}
+        if (edad<=0){
+        throw new MioException ();
+        }
         return mayor;
     }
     public int calcularIMC( double peso, double altura){
